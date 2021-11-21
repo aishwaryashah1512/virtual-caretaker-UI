@@ -1,0 +1,84 @@
+/* /* calorie */
+
+.com{
+    height: 100vh;
+    width: 100vw;
+}
+
+.calorie{
+    background-color: rgb(233, 232, 232);
+    /* height: 100vh; */
+    margin-left: 25%;
+    margin-top: 1em;
+     /* display: flex; */
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    color: black;
+    font-size: 20px;
+    border: 3px solid black;
+    border-radius: 10px 8px 10px 8px;
+}
+
+.con{
+    display: flex;
+    flex-direction: row;
+}
+
+.con1{
+    /* text-align: left; */
+    width: 33%;
+}
+
+.ip{
+    margin: 1em;
+    height: 1.5em;
+    width: 70%;
+    justify-content: center;
+    border-radius: 2em;
+}
+
+.heading{
+    font-size:2em;
+    margin: 2em;
+    margin-top: 4em;
+}
+
+.content{
+    margin: 1em;
+} 
+
+p{
+    margin: 0em;
+}
+
+#list{
+    /* border: 0em; */
+    border-radius: 0.2em;
+    margin: 1em;
+}
+
+.radio{
+    margin:1em;
+    margin-right: 0em;
+}
+
+.last{
+    margin: 2em;
+}
+
+.error{
+    /* width: 100px; */
+    /* height: 100px; */
+    /* /* background: red; */
+    transition-property:initial;
+    /* transition-duration: 2s; */
+    /* transition-timing-function:initial; */
+    transition-delay: 1s; 
+    transition: transform 0.3s ease-out;
+}
+
+select{
+    width: 60%;
+}

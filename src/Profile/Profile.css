@@ -1,0 +1,89 @@
+.container{
+    color: black;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.row1{
+    width: 40%;
+    background-color: rgb(211, 211, 233);
+    display: flex;
+    flex-direction: column;
+}
+
+.row2{
+   width: 50%;
+   color: black;
+}
+
+.picture{
+    border-radius: 50%;
+    
+}
+
+.information{
+    border: 2px solid black;
+    margin: 40px;
+    border-radius: 10px;
+    text-align: left;
+    width: 80%;
+}
+
+.information1{
+    padding: 40px;
+    border: 10px solid rgb(155, 155, 172);
+    margin: 10px;
+    border-radius: 10px;
+    text-align: left;
+    color: black;
+    background-color: rgb(233, 233, 243);
+}
+
+.info{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.label{
+    width: 25%;
+}
+input{
+    width: 50%;
+}
+button{
+    width: fit-content;
+}
+.error1{
+    font-size: 1.5em;
+    line-height: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 30%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width : 750px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .row1{
+        width: 100vw;
+    }
+    .picture{
+        width: 100px;
+        height: 100px;
+    }
+    .information{
+    }
+    img{
+        display: inline-flexbox;
+    }
+    input{
+        margin-left:10%;
+    }
+}

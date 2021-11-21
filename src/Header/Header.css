@@ -1,0 +1,19 @@
+.Nav{
+    text-align: right;
+    width: 100%;
+    color: white !important;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+i {
+    margin: 0em;
+    color: #fff;
+}
+
+.profile{
+    color: white;
+    margin: 0em;
+    /* margin-bottom: 2em; */
+    /* padding-bottom: 10px; */
+}
