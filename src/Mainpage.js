@@ -31,7 +31,7 @@ class Mainpage extends Component {
    render() {
 
       const agehandler = (e) => {
-         if (e.target.value == '') {
+         if (e.target.value === '') {
             e.target.value = 0
          }
          this.setState({ age: parseInt(e.target.value) }, () => { })
@@ -42,21 +42,21 @@ class Mainpage extends Component {
       }
 
       const sbpHandler = (e) => {
-         if (e.target.value == '') {
+         if (e.target.value === '') {
             e.target.value = 0
          }
          this.setState({ sbp: parseInt(e.target.value) })
       }
 
       const dbpHandler = (e) => {
-         if (e.target.value == '') {
+         if (e.target.value === '') {
             e.target.value = 0
          }
          this.setState({ dbp: parseInt(e.target.value) }, () => {  })
       }
 
       const sugarHandler = (e) => {
-         if (e.target.value == '') {
+         if (e.target.value === '') {
             e.target.value = 0
          }
          this.setState({ sugar: parseInt(e.target.value) }, () => {  })
@@ -87,18 +87,18 @@ class Mainpage extends Component {
          if (this.state.sbp === 0 && this.state.dbp === 0) {
             this.setState({ bpresult: 'Please enter your diastolic Blood Pressure readings and systolic Blood Pressure' })
          }
-         else if (this.state.sbp != 0 && this.state.dbp === 0) {
+         else if (this.state.sbp !== 0 && this.state.dbp === 0) {
             this.setState({ bpresult: 'Please enter your diastolic Blood Pressure readings' })
 
          }
-         else if (this.state.sbp === 0 && this.state.dbp != 0) {
+         else if (this.state.sbp === 0 && this.state.dbp !== 0) {
             this.setState({ bpresult: 'Please enter your systolic Blood Pressure readings' })
          }
          else {
             let bpreport
             const sys = this.state.sbp;
             const dia = this.state.dbp;
-            if (sys != 0 && dia != 0) {
+            if (sys !== 0 && dia !== 0) {
                if (sys < 90 && dia < 60) {
                   bpreport = 'Your blood Pressure is low'
                   bpans = true
@@ -111,7 +111,7 @@ class Mainpage extends Component {
                   bpreport = 'Your blood Pressure is slighlty Elevated and needs care'
                   bpans = true
                }
-               else if (sys >= 130 && sys <= 139 || dia >= 80 && dia <= 89) {
+               else if ((sys >= 130 && sys <= 139) || (dia >= 80 && dia <= 89)) {
                   bpreport = 'Your blood Pressure is high.You are at Stage 1 Hypertension'
                   bpans = true
                }
@@ -134,8 +134,7 @@ class Mainpage extends Component {
                      systolic: this.state.sbp,
                      bpresult: this.state.bpresult
                   })
-               }).then(response => { }).
-                  catch(error => { })
+               }).then(response => { }).catch(error => { })
             })
          }
       }
@@ -143,15 +142,15 @@ class Mainpage extends Component {
       const diagnoseSugarHandler = (e) => {
          e.preventDefault()
          let error = ''
-         if (this.state.age == 0 || this.state.gender == 'not selected' || this.state.sugar == 0) {
+         if (this.state.age === 0 || this.state.gender === 'not selected' || this.state.sugar === 0) {
 
-            if (this.state.age == 0) {
+            if (this.state.age === 0) {
                error = "Please enter your age. "
             }
-            if (this.state.gender == 'not selected') {
+            if (this.state.gender === 'not selected') {
                error += "Please select appropriate gender option. "
             }
-            if (this.state.sugar == 0) {
+            if (this.state.sugar === 0) {
                error += "Please add blood glucose level readings. "
             }
             this.setState({ sugarresult: error })
@@ -477,7 +476,7 @@ class Mainpage extends Component {
          if (this.state.bpabnormality && this.state.bpresult !== 'You are perfectly Healthy' && this.state.bpresult !== 'Your blood Pressure is low') {
             dietlist.push(diet[3].hyperbp)
          }
-         if (this.state.bpabnormality && this.state.bpresult == 'Your blood Pressure is low') {
+         if (this.state.bpabnormality && this.state.bpresult === 'Your blood Pressure is low') {
             dietlist.push(diet[2].hypobp)
          }
 
@@ -504,13 +503,13 @@ class Mainpage extends Component {
          dist = Math.acos(dist)
          dist = dist * 180 / Math.PI
          dist = dist * 60 * 1.1515
-         if (unit == "K") { dist = dist * 1.609344 }
+         if (unit === "K") { dist = dist * 1.609344 }
          return dist * 1609.344
       }
 
       let hospitalbuttonbp = null
       let hospitalbuttonsu = null
-      let hospitallist = null
+      
       if (this.state.bpabnormality ) {
          // hospitalbutton = <Button color="blue" className="btn" onClick={(e) => hospitalhandler(e)}>Hospitals near me</Button>
          hospitalbuttonbp = <Button color="blue" className="btn" onClick={(e) => hospitalhandler(e)}>
@@ -553,8 +552,8 @@ class Mainpage extends Component {
                })
          })
       }
-
-      if (this.state.hosplist != []) {
+      let hospitallist = null
+      if (this.state.hosplist !== []) {
          hospitallist = this.state.hosplist.map((i, ind) => { return (<div><li key={ind}>{i.name}</li></div>) })
          hospitallist = <BackDrop hosp={this.state.hosplist} />
       }
