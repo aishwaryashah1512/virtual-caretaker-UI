@@ -12,7 +12,7 @@ class Example extends React.Component {
     not : 0
   }
   componentDidMount() {
-    var today = new Date();
+    
     setInterval(() => this.change(), 1000 * 60 * 60)
   }
 

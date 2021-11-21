@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Header from './Header/Header';
-import { Button } from 'semantic-ui-react';
 import doctors from './images/doctors.jpg';
 import './homepage.css';
 class Homepage extends Component {
@@ -14,7 +13,7 @@ class Homepage extends Component {
                 <div className='home'>
                     {/* <h1><strong>VIRTUAL CARETAKER</strong></h1> */}
                     <div className="image">
-                        <img src={doctors} />
+                        <img alt=''src={doctors} />
                     </div>
                     <div className="rowele">
                         <button className="ui semantic primary button">

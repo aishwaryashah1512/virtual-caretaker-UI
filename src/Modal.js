@@ -1,10 +1,10 @@
 import React from 'react'
-import { Button, Modal } from 'semantic-ui-react'
+import {  Modal } from 'semantic-ui-react'
 
 function ModalExampleModal(props) {
     const [open, setOpen] = React.useState(false)
 
-    if (props.name == "hospitals") {
+    if (props.name === "hospitals") {
         return (
             <Modal
                 onClose={() => setOpen(false)}
@@ -37,7 +37,7 @@ function ModalExampleModal(props) {
                 </Modal.Actions>
             </Modal>
         )
-    } else if(props.name == "diet"){
+    } else if(props.name === "diet"){
         return (
             <Modal
                 onClose={() => setOpen(false)}

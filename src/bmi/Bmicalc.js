@@ -26,7 +26,7 @@ class BMICalculater extends Component {
         }
         const reshandler = (event) => {
             event.preventDefault();
-            if (this.state.hval == '' || this.state.wval == '') {
+            if (this.state.hval === '' || this.state.wval === '') {
                 this.setState({ errorMessage: 'Please make sure the values you entered are correct' })
             }
             else {
@@ -74,7 +74,7 @@ class BMICalculater extends Component {
                         Overweight : 25–29.9 <br />
                         Obesity : BMI of 30 or greater <br />
                     </div>
-                    <img src={Aimlogo} height="100px" />
+                    <img alt=''src={Aimlogo} height="100px" />
                     <div class="content2">
                         <h1 class="heading">BMI Calculator</h1>
                         <strong>Enter your height and weight using standard measures</strong><br />

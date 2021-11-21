@@ -192,7 +192,7 @@ class Auth extends Component {
                         <Button onClick={()=>switchAuthModeHandler()} btnType='Danger'>SWITCH TO {this.state.isSignUp ? ' SIGN-IN' : 'SIGN-UP'}</Button>
                     </div>
                     <div>
-                        <img src={doctor} />
+                        <img alt=''src={doctor} />
                     </div>
                 </div>
             </div>

@@ -459,8 +459,7 @@ class Mainpage extends Component {
                      age: this.state.age,
                      gender: this.state.gender,
                   })
-               }).then(response => { }).
-                  catch(error => {  })
+               })
             }
             )
          }
@@ -552,11 +551,11 @@ class Mainpage extends Component {
                })
          })
       }
-      let hospitallist = null
+     /* let hospitallist = null
       if (this.state.hosplist !== []) {
          hospitallist = this.state.hosplist.map((i, ind) => { return (<div><li key={ind}>{i.name}</li></div>) })
          hospitallist = <BackDrop hosp={this.state.hosplist} />
-      }
+      }*/
 
       return (
          <div className="main">

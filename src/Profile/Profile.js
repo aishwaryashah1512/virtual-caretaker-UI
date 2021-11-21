@@ -80,7 +80,7 @@ class Profile extends Component {
     
     render() {
 
-        if (this.state.username == '') {
+        if (this.state.username === '') {
             return (
                 <div>
                     <div>
@@ -89,7 +89,7 @@ class Profile extends Component {
                     <div className='container'>
                         <div className='row1'>
                             <div>
-                                <img className="picture" src={dummy} />
+                                <img alt='' className="picture" src={dummy}/>
                             </div>
                             <div> {this.state.username} </div>
                             <div className="information">
@@ -126,7 +126,7 @@ class Profile extends Component {
                     <div className='container'>
                         <div className='row1'>
                             <div>
-                                <img className="picture" src={dummy} />
+                                <img alt='' className="picture" src={dummy} />
                             </div>
                             <div> {this.state.username} </div>
                             <div className="information">
